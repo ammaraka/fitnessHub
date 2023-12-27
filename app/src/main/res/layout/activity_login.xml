@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/layout"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/login_to"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/fitnesshub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fitnesshub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="100dp"
+        android:text="@string/fitness_hub"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/etUserName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Login" />
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="70dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_background"
+        android:hint="@string/email"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fitnesshub"
+        tools:ignore="DuplicateClickableBoundsCheck,TextFields" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/edittext_background"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etUserName"
+        android:importantForAutofill="no" />
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="20dp"
+
+        android:background="@drawable/button_layout"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:backgroundTint="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="0dp"
+        android:padding="10dp"
+        android:text="@string/need_an_account_sign_up"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
