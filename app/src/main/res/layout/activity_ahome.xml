@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Ahome">
+    tools:context=".Ahome"
+
+    >
 
     <FrameLayout
         android:id="@+id/container"
@@ -32,13 +34,13 @@
         android:layout_width="28dp"
         android:layout_height="75dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="0dp"
         android:background="@color/white"
         android:contentDescription="@string/app_name"
         android:scaleType="fitCenter"
         android:src="@drawable/sss"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
 
     <Button
@@ -49,11 +51,11 @@
         android:layout_marginTop="0dp"
         android:padding="0dp"
         android:text="Map"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="15sp"
-        app:layout_constraintEnd_toStartOf="@+id/list"
+        app:backgroundTint="@color/teal_500"
 
-        app:backgroundTint="@color/teal_200"
+        app:layout_constraintEnd_toStartOf="@+id/list"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
 
@@ -65,32 +67,68 @@
         android:layout_marginEnd="120dp"
         android:padding="0dp"
         android:text="List"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="15sp"
-        app:backgroundTint="@color/teal_200"
+        app:backgroundTint="@color/teal_500"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/map"
         app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         app:cardCornerRadius="8dp"
-
-
-        app:cardElevation="8dp"
+        app:cardElevation="12dp"
         app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/list">
 
         <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchHer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
             app:queryHint="Search here...." />
 
     </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginVertical="5dp"
+        android:background="@drawable/bottom_background"
+        android:elevation="2dp"
+        app:menu="@menu/bottom_menu"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@drawable/item_selection"
+        app:itemRippleColor="@android:color/transparent"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

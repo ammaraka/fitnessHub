@@ -14,12 +14,20 @@
         android:theme="@style/Theme.FitnessHub"
         tools:targetApi="31">
         <activity
-            android:name=".Ahome"
+            android:name=".Aprofile"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
-            android:exported="false"
-            android:label="@string/title_activity_main2" />
+            android:name=".Aevent"
+            android:exported="false" />
+        <activity
+            android:name=".Ahome"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".SignUp"
             android:exported="false" />
@@ -28,13 +36,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>

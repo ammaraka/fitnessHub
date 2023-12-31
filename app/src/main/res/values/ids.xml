@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="map" type="id" />
+    <item name="imageButton5" type="id" />
+    <item name="cardView" type="id" />
+    <item name="recyclerView" type="id" />
+    <item name="searchHer" type="id" />
+    <item name="list" type="id" />
+    <item name="imageButton4" type="id" />
+</resources>

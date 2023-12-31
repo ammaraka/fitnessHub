@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 
 import com.example.fitnesshub.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,30 +15,31 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(Home())
 
-        binding.bottomNavigationView.setOnItemSelectedListener {
+       // replaceFragment(Home())
 
-            when(it.itemId){
-                R.id.home -> replaceFragment(Home())
-                R.id.profile -> replaceFragment(Event())
-                R.id.event -> replaceFragment(Profile())
-
-                else ->{
-
-                }
-            }
-            true
-        }
+//        binding.bottomNavigationView.setOnItemSelectedListener {
+//
+//            when(it.itemId){
+//                R.id.home -> replaceFragment(Home())
+//                R.id.profile -> replaceFragment(Event())
+//                R.id.event -> replaceFragment(Profile())
+//
+//                else ->{
+//
+//                }
+//            }
+//            true
+//        }
     }
 
-    private fun replaceFragment(fragment :Fragment){
-        val fragmentManager=supportFragmentManager
-       val  fragmentTransaction=fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout,fragment)
-
-        fragmentTransaction.commit()
-
-    }
+//    private fun replaceFragment(fragment :Fragment){
+//        val fragmentManager=supportFragmentManager
+//       val  fragmentTransaction=fragmentManager.beginTransaction()
+//        fragmentTransaction.replace(R.id.frame_layout,fragment)
+//
+//        fragmentTransaction.commit()
+//
+//    }
 
 }
